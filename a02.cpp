@@ -10,8 +10,8 @@ using namespace std;
 
 string doubleFormatter(double givenDoub) {
     string tempStr = to_string(givenDoub);
-    if (tempStr.at(tempStr.size() - 4) >= 54 && tempStr.at(tempStr.size() - 4) <= 57) {
-        tempStr.at(tempStr.size() - 5) = int(tempStr.at(tempStr.size() - 5)) + 1;
+    if (tempStr.at(tempStr.size() - 4) >= 54 && tempStr.at(tempStr.size() - 4) <= 57) {  //took me literally 90-120 minutes to figure out c++ isn't guna let me
+        tempStr.at(tempStr.size() - 5) = int(tempStr.at(tempStr.size() - 5)) + 1;        //cast a string or character to an integer, only to ASCII value I guess.
     }
     return ("$" + tempStr).substr(0, ("$" + tempStr).size() - 4);
 }

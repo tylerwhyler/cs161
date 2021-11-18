@@ -103,8 +103,6 @@ void CalcSubTotalCost(int numOfMembershipMonths, int numOfTrainingSessions, doub
 void TrySeniorDiscount(char isSenior, double subTotalCost, double& totalCost) {
     if (toupper(isSenior) == 'Y') {
         totalCost = subTotalCost * (1 - SENIOR_DISCOUNT);
-        cout << isSenior << endl;
-        cout << (1 - SENIOR_DISCOUNT) << endl;
     }
     else {
         totalCost = subTotalCost;
